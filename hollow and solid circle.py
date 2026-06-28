@@ -1,0 +1,23 @@
+import pygame
+
+pygame.init()
+window = pygame.display.set_mode((600, 600))
+
+window.fill((255, 255, 255))
+
+GREEN = ((0, 255, 0))
+#solid circle
+pygame.draw.circle(window, GREEN,(300, 300), 50)
+#hollow circle
+pygame.draw.circle(window, GREEN,(100, 100), 50, 10)
+
+pygame.display.update()
+
+running = False
+
+while not running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = True
+
+    pygame.display.flip
